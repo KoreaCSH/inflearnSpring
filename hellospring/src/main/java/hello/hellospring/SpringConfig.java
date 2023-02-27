@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.controller.HelloController;
 import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.JpaMemberRepository;
@@ -12,10 +13,11 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
+import java.sql.Time;
 
 @Configuration
 public class SpringConfig {
-
+      /* JdbcTemplate 설정 */
 //    private final DataSource dataSource;
 //
 //    @Autowired
@@ -23,6 +25,14 @@ public class SpringConfig {
 //        this.dataSource = dataSource;
 //    }
 
+    /* Spring Data JPA 설정 */
+//    private final MemberRepository memberRepository;
+
+//    public SpringConfig(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+
+    // JPA 설정
     private EntityManager em;
 
     @Autowired
