@@ -21,13 +21,13 @@ public class AppConfig {
     }
 
     @Bean
-    public DiscountPolicy discountPolicy() {
-        return new RateDiscountPolicy();
+    public MemberService memberService() {
+        return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public MemberService memberService() {
-        return new MemberServiceImpl(memberRepository());
+    public DiscountPolicy discountPolicy() {
+        return new RateDiscountPolicy();
     }
 
     @Bean
