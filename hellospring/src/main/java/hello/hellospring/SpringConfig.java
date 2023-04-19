@@ -15,7 +15,7 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.sql.Time;
 
-@Configuration
+//@Configuration
 public class SpringConfig {
       /* JdbcTemplate 설정 */
 //    private final DataSource dataSource;
@@ -33,22 +33,22 @@ public class SpringConfig {
 //    }
 
     // JPA 설정
-    private EntityManager em;
-
-    @Autowired
-    public SpringConfig(EntityManager em) {
-        this.em = em;
-    }
-
-    @Bean
-    public MemberService memberService() {
-        return new MemberService(memberRepository());
-    }
-
-    @Bean
-    public MemberRepository memberRepository() {
-//        return new JdbcTemplateMemberRepository(dataSource);
-        return new JpaMemberRepository(em);
-    }
+//    private EntityManager em;
+//
+//    @Autowired
+//    public SpringConfig(EntityManager em) {
+//        this.em = em;
+//    }
+//
+//    @Bean
+//    public MemberService memberService() {
+//        return new MemberService(memberRepository());
+//    }
+//
+//    @Bean
+//    public MemberRepository memberRepository() {
+////        return new JdbcTemplateMemberRepository(dataSource);
+//        return new JpaMemberRepository(em);
+//    }
 
 }
